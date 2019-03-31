@@ -1,0 +1,48 @@
+.btn{
+    color: $btn-text-color;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.8;
+
+    //button sizes
+    &.btn--small{
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+    }
+    &.btn--large{
+        width: 75px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    //button color variations
+    &.btn--orange{
+        background: #FFAB4C;
+        //hover state
+        &.btn--hover{
+            background: #F48C36;
+        }
+        //disabled state
+        &.btn--disabled{
+            cursor: default;
+            pointer-events: none;
+            background: #FFB980;
+        }
+    }
+    &.btn--blue{
+        background: #57C1E8;
+        //hover state
+        &.btn--hover{
+            background: #3C97D0;
+        }
+        //disabled state
+        &.btn--disabled{
+            cursor: default;
+            pointer-events: none;
+            background: #9ECBE4;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+// global
+@import 'global/reset';
+@import 'global/variables';
+
+// components
+@import 'components/typography';
+@import 'components/button';
+
+//only for demo and presentational purpose. Must be removed from code before publishing. No BEM styling is enforced here.
+html, body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+h2{
+  margin-bottom: 10px;
+}
+p{
+  margin-bottom: 10px;
+}
+
+.heading--with-bottom-spacing{
+  margin-bottom: 30px;
+}
+
+//Column stying. For the demo
+.column-wrapper{
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+  .column--left-space{
+    margin-left: 30px;
+  }
+}
+
+//text styling
+.text{
+  font-size: $base-font-size;
+}
+.text--uppercase{
+  text-transform: uppercase;
+}
+
+////////////// end of demo styling///////////
