@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './stylesheets/styles.scss';
-import Button from './components/Button/index.js';
+import Button from './components/Button';
+import LeaseList from "./components/LeaseList";
+
 render(
     <React.Fragment>
-    <div className={'block block-centered'}>
+    <div className={'block'}>
         <h1 className={'heading heading--with-bottom-spacing'}>Mini CSS Framework</h1>
         <div className={'column-wrapper'}>
             <div className={'column'}>
@@ -40,7 +42,7 @@ render(
             </div>
         </div>
     </div>
-        <div className={'block block-centered'}>
+        <div className={'block'}>
             <h1 className={'heading heading--with-bottom-spacing'}>Mini CSS Framework(React)</h1>
             <div className={'column-wrapper'}>
                 <div className={'column'}>
@@ -54,6 +56,15 @@ render(
             </div>
         </div>
 
+        <div className={'block'}>
+            <h1 className={'heading heading--with-bottom-spacing'}>Leases</h1>
+            <div className={'column-wrapper'}>
+                <div className={'column'}>
+                    <LeaseList source={'https://hiring-task-api.herokuapp.com/v1/leases'}/>
+                </div>
+            </div>
+        </div>
+
     </React.Fragment>,
     document.getElementById('app')
-)
+);
