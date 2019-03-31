@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './stylesheets/styles.scss';
-
+import Button from './components/Button/index.js';
 render(
+    <React.Fragment>
     <div className={'block block-centered'}>
         <h1 className={'heading heading--with-bottom-spacing'}>Mini CSS Framework</h1>
         <div className={'column-wrapper'}>
@@ -38,6 +39,21 @@ render(
 
             </div>
         </div>
-    </div>,
-    document.querySelector('#app')
+    </div>
+        <div className={'block block-centered'}>
+            <h1 className={'heading heading--with-bottom-spacing'}>Mini CSS Framework(React)</h1>
+            <div className={'column-wrapper'}>
+                <div className={'column'}>
+                    <Button>Default</Button>
+                    <Button size={'large'}>Large</Button>
+                    <Button color={'blue'}>Blue</Button>
+                    <Button isDisabled>Disabled</Button>
+                    <Button isHovered>Hover</Button>
+                    <Button onClick={()=>{alert('clicked button')}}>Onclick</Button>
+                </div>
+            </div>
+        </div>
+
+    </React.Fragment>,
+    document.getElementById('app')
 )
